@@ -21,7 +21,7 @@ function RightCard({ searchResults }) {
             <h2 className="text-white text-3xl font-semibold mb-4 opacity-50">Products</h2>
 
             {
-                newList.map((item) =>
+                removeDups(productList).map((item) =>
                     <div key={item.date}>
                         <ProductList searchResults={searchResults} prodName={item} />
                     </div>

@@ -16,9 +16,7 @@ function leftcard({ searchResults }) {
         stateList.push(item.address.state);
         cityList.push(item.address.city);
     })
-    const newproductList = removeDups(productList);
-    const newstateList = removeDups(stateList);
-    const newcityList = removeDups(cityList);
+
     return (
         <div className="h-72 w-60 bg-[#131313] rounded-2xl p-4">
             <h3 className="text-[#A5A5A5] font-light text-lg mt-2 mb-2">Filters
@@ -27,7 +25,7 @@ function leftcard({ searchResults }) {
             <Dropdown text='Product' className="rounded-md p-2 bg-[#232323] hover:border-[#232323] focus:outline-none appearance-none outline-none text-white w-full justify-center text-lg items-center mb-2 border-[#131313]">
                 <Dropdown.Menu className="bg-[#232323] border-[#131313]!important outline-none rounded-md max-h-56 overflow-scroll w-40">
                     {
-                        newproductList.map((item) =>
+                        removeDups(productList).map((item) =>
                             <div key={item.date}>
                                 <Dropdown.Item text={item} className="bg-[#232323] p-2 border-[#131313]" />
                             </div>
@@ -41,7 +39,7 @@ function leftcard({ searchResults }) {
             <Dropdown text='State' className="rounded-md p-2 bg-[#232323] hover:border-[#232323] focus:outline-none appearance-none outline-none text-white w-full justify-center text-lg items-center mb-2 border-[#131313]">
                 <Dropdown.Menu className="bg-[#232323] border-[#131313]!important outline-none rounded-md max-h-56 overflow-scroll ">
                     {
-                        newstateList.map((item) =>
+                        removeDups(stateList).map((item) =>
                             <div key={item.date}>
                                 <Dropdown.Item text={item} className="bg-[#232323] p-2 border-[#131313]" />
                             </div>
@@ -55,7 +53,7 @@ function leftcard({ searchResults }) {
             <Dropdown text='City' className="rounded-md p-2 bg-[#232323] hover:border-[#232323] focus:outline-none appearance-none outline-none text-white w-full justify-center text-lg items-center mb-2 border-[#131313]">
                 <Dropdown.Menu className="bg-[#232323] border-[#131313]!important outline-none rounded-md max-h-56 overflow-scroll w-72!important">
                     {
-                        newcityList.map((item) =>
+                        removeDups(cityList).map((item) =>
                             <div key={item.date}>
                                 <Dropdown.Item text={item} className="bg-[#232323] p-2 border-[#131313]" />
                             </div>

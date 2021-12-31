@@ -55,7 +55,7 @@ function leftcard({ searchResults }) {
             <Dropdown text='City' className="rounded-md p-2 bg-[#232323] hover:border-[#232323] focus:outline-none appearance-none outline-none text-white w-full justify-center text-lg items-center mb-2 border-[#131313]">
                 <Dropdown.Menu className="bg-[#232323] border-[#131313]!important outline-none rounded-md max-h-56 overflow-scroll w-72!important">
                     {
-                        newcityList.map((item) =>
+                        removeDups(cityList).map((item) =>
                             <div key={item.date}>
                                 <Dropdown.Item text={item} className="bg-[#232323] p-2 border-[#131313]" />
                             </div>
