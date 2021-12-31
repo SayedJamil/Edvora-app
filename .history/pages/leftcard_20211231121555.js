@@ -52,7 +52,7 @@ function leftcard({ searchResults }) {
                 <Dropdown.Menu className="bg-[#232323] border-[#131313]!important outline-none rounded-md max-h-56 overflow-scroll w-72!important">
                     {
                         removeDups(cityList).map((item) =>
-                            <div key={item.date}>
+                            <div>
                                 <Dropdown.Item text={item} className="bg-[#232323] p-2 border-[#131313]" />
                             </div>
 
