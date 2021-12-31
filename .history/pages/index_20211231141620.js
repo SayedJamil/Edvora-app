@@ -3,7 +3,6 @@ import Mainpage from './MainPage'
 import 'semantic-ui-css/semantic.min.css'
 
 export default function Home({ searchResults }) {
-  console.log(searchResults)
 
   return (
     <div className="bg-[#292929] w-full min-h-screen h-full">
