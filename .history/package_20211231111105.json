@@ -1,9 +1,6 @@
 {
   "name": "edvora-app",
   "private": true,
-  "engines": {
-    "node": "14.17.0"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
