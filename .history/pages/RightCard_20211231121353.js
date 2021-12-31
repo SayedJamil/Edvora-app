@@ -18,7 +18,7 @@ function RightCard({ searchResults }) {
             {
                 removeDups(productList).map((item) =>
                     <div key={item.date}>
-                        <ProductList searchResults={searchResults} prodName={item} />
+                        <ProductList searchResults={searchResults} prodName={item}/>
                     </div>
 
                 )

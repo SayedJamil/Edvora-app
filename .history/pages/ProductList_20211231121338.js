@@ -10,7 +10,7 @@ function ProductList({ searchResults, prodName }) {
                     searchResults
                         .filter(name => name.product_name == prodName)
                         .map((item) =>
-                            <div key={item.date}>
+                            <div >
                                 <ProductCard name={item.product_name} image={item.image} brand={item.brand_name} desc={item.discription} state={item.address.state} city={item.address.city} price={item.price} date={item.date} />
                             </div>
 
